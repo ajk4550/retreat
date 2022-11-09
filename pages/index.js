@@ -1,3 +1,4 @@
+import Card from '../components/Homes/Card';
 import Layout from '../components/layouts/Layout';
 import prisma from '../lib/prisma';
 
@@ -14,13 +15,7 @@ export default function Home({ homes }) {
     <Layout>
       <h1 className="text-3xl bold underline">All homes</h1>
       {homes.map((home, i) => (
-        <div key={i}>
-          <p>{home.title}</p>
-          <ul className="list-disc ml-5">
-            <li>{home.location}</li>
-            <li>{home.pricePerNight}</li>
-          </ul>
-        </div>
+        <Card home={home} key={i} />
       ))}
     </Layout>
   );
