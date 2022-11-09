@@ -1,10 +1,9 @@
-import Navigation from '../components/layouts/Navigation';
+import Layout from '../components/layouts/Layout';
 
 export default function Home() {
   return (
-    <>
-      <Navigation />
-      <h1 className="text-3xl font-bold underline">Welcome!</h1>
-    </>
+    <Layout>
+      <h1 className="text-3xl bold underline">All homes</h1>
+    </Layout>
   );
 }
