@@ -13,7 +13,6 @@ export const getStaticProps = async () => {
 export default function Home({ homes }) {
   return (
     <Layout>
-      <h1 className="text-3xl bold underline">All homes</h1>
       <CardList homes={homes} />
     </Layout>
   );
