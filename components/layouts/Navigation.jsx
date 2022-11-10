@@ -17,22 +17,39 @@ const Navigation = () => {
           <div className="flex space-x-4">
             <div>
               {/* Logo */}
-              <a className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
-                <Image
-                  alt="Temporary Logo"
-                  src="/logo.png"
-                  height={40}
-                  width={40}
-                />
-                <span className="font-bold ml-2">Retreat</span>
-              </a>
+              <Link
+                href="/"
+                className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900"
+              >
+                <>
+                  <Image
+                    alt="Temporary Logo"
+                    src="/logo.png"
+                    height={40}
+                    width={40}
+                  />
+                  <span className="font-bold ml-2">Retreat</span>
+                </>
+              </Link>
             </div>
           </div>
           <div className="hidden md:flex flex items-center space-x-1">
-            <a className="py-5 px-3 hover:text-pink-700 hover:cursor-pointer">
+            <Link
+              href="/homes/new"
+              className="py-5 px-3 hover:text-pink-700 hover:cursor-pointer"
+            >
+              List Your Home
+            </Link>
+            <a
+              href="#"
+              className="py-5 px-3 hover:text-pink-700 hover:cursor-pointer"
+            >
               Sign In
             </a>
-            <a className="py-2 px-4 bg-pink-700 hover:bg-pink-800 text-white rounded-lg hover:cursor-pointer">
+            <a
+              href="#"
+              className="py-2 px-4 bg-pink-700 hover:bg-pink-800 text-white rounded-lg hover:cursor-pointer"
+            >
               Sign up
             </a>
           </div>
@@ -86,7 +103,9 @@ const Navigation = () => {
         <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
           Sign Out
         </a>
-        <a className="block py-2 px-4 text-sm hover:bg-gray-200">Sign In</a>
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
+          Sign In
+        </a>
       </div>
     </nav>
   );
