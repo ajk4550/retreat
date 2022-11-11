@@ -1,7 +1,9 @@
-const Button = ({
+import Link from 'next/link';
+
+const LinkButton = ({
   type = 'primary',
   children,
-  onClick: handleClick = () => {},
+  href,
   className: additionalClasses = '',
 }) => {
   let baseClasses = `py-2 px-4 rounded-lg hover:cursor-pointer ${additionalClasses}`;
@@ -22,10 +24,10 @@ const Button = ({
   }
 
   return (
-    <button className={fullClass} onClick={() => handleClick()}>
+    <Link href={href} className={fullClass}>
       {children}
-    </button>
+    </Link>
   );
 };
 
-export default Button;
+export default LinkButton;

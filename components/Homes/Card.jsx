@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Card = ({ home }) => {
   return (
@@ -9,6 +10,7 @@ const Card = ({ home }) => {
           src="/test-home.jpeg"
           width={400}
           height={300}
+          alt="Photo of home"
         />
       </a>
       <div className="p-5">
@@ -21,6 +23,7 @@ const Card = ({ home }) => {
         <p className="mb-3 font-normal text-gray-500">
           ${home.pricePerNight} / Night
         </p>
+        <Link href={`/homes/${home.id}`}>Learn More</Link>
       </div>
     </div>
   );
